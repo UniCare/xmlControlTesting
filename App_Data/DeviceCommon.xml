@@ -1,0 +1,1136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DeviceFieldInformation>
+  <Panel  Caption="Device Information">
+    <Field>
+      <Title>MAC Address:</Title>
+      <FieldKeyName>txtMACAddress</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Device Pool</Title>
+      <FieldKeyName>DevicePool</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{DevicePoolUUD}</Default>
+      <Source>
+        <SourceInfo>
+        <SourceType>DB</SourceType>
+          <Caption>USP_GetDevicePool</Caption>
+          <Key>DPID</Key>
+          <Value>DPName</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Common Device Configuration</Title>
+      <FieldKeyName>CommonDeviceConfiguration</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Phone Button Template</Title>
+      <FieldKeyName>PhoneButtonTemplate</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{ButtonLayoutUUID}</Default>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Softkey</Title>
+      <FieldKeyName>Softkey</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetSoftKeyTemplates</Caption>
+          <Key>SKTID</Key>
+          <Value>SoftKeyTemplateName</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Common Phone Profile</Title>
+      <FieldKeyName>CommonPhoneProfile</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Calling Search Space</Title>
+      <FieldKeyName>CallingSearchSpace</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{ClassofServiceUUID}</Default>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCustomerCss</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>DisplayName</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>AAR Calling Search Space</Title>
+      <FieldKeyName>AARCallingSearchSpace</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCustomerCss</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>DisplayName</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Media Resource Group List</Title>
+      <FieldKeyName>MediaResourceGroupList</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCustomerMGRL</Caption>
+          <Key>pkid</Key>
+          <Value>Name</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+    
+    <Field>
+      <Title>User Hold MOH Audio Source</Title>
+      <FieldKeyName>UserHoldMOHAudioSource</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Network Hold MOH Audio Source</Title>
+      <FieldKeyName>NetworkHoldMOHAudioSource</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>1-SampleAudioSource</Item>
+            <Item>2-DulcimerHold</Item>
+            <Item>3-SilenceAudioSource</Item>
+            <Item>4-KetchupHold</Item>
+            <Item>5-RojaHold</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Location</Title>
+      <FieldKeyName>Location</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{LocationCACUUID}</Default>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCustomerLocation</Caption>
+          <Key>Lid</Key>
+          <Value>Name</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>AAR Group</Title>
+      <FieldKeyName>AARGroup</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCustomerAARGroup</Caption>
+          <Key>ID</Key>
+          <Value>Name</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>User Locale</Title>
+      <FieldKeyName>UserLocale</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{CountryCode}</Default>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>English, United States</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Network Locale</Title>
+      <FieldKeyName>NetworkLocale</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>Country</Key>
+          <Value>Country</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Argentina</Item>
+            <Item>Australia</Item>
+            <Item>Bahrain</Item>
+            <Item>Bengium</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Built In Bridge</Title>
+      <FieldKeyName>BuiltInBridge</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Off</Item>
+            <Item>On</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Privacy</Title>
+      <FieldKeyName>Privacy</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Off</Item>
+            <Item>On</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Device Mobility Mode</Title>
+      <FieldKeyName>DeviceMobilityMode</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Off</Item>
+            <Item>On</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Owner</Title>
+      <FieldKeyName>Owner</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{WorkspaceDevice}</Default>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetUserByApplicationProfileID</Caption>
+          <Key>UserID</Key>
+          <Value>LoginID</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Owner User ID</Title>
+      <FieldKeyName>OwnerUserID</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Default>{UserID}</Default>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetUserByApplicationProfileID</Caption>
+          <Key>UserID</Key>
+          <Value>LoginID</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Phone Personalisation</Title>
+      <FieldKeyName>PhonePersonalisation</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Disabled</Item>
+            <Item>Enabled</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Service Provisioning</Title>
+      <FieldKeyName>ServiceProvisioning</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Internal</Item>
+            <Item>External URL</Item>
+            <Item>Both</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Phone Load Name</Title>
+      <FieldKeyName>PhoneLoadName</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Use Trusted Relay Point</Title>
+      <FieldKeyName>UseTrustedRelayPoint</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>On</Item>
+            <Item>Off</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>BLF Audible Alert Setting (Phone Idel)</Title>
+      <FieldKeyName>BLFAudibleAlertSettingPhoneIdel</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>On</Item>
+            <Item>Off</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>BLF Audible Alert Setting (Phone Busy)</Title>
+      <FieldKeyName>BLFAudibleAlertSettingPhoneBusy</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>On</Item>
+            <Item>Off</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Always Use Prime Line</Title>
+      <FieldKeyName>AlwaysUsePrimeLine</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>On</Item>
+            <Item>Off</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    
+     <Field>
+      <Title>Always Use Prime Line for Voice Message</Title>
+      <FieldKeyName>AlwaysUsePrimeLineforVoiceMessage</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+       <Source>
+         <SourceInfo>
+           <SourceType>INLINE</SourceType>
+           <Caption></Caption>
+           <Key>key</Key>
+           <Value>value</Value>
+           <SQLParameter/>
+           <ListItem>
+             <Item>On</Item>
+             <Item>Off</Item>
+             <Item>Default</Item>
+           </ListItem>
+         </SourceInfo>
+       </Source>
+    </Field>
+
+    <Field>
+      <Title>Geolocation</Title>
+      <FieldKeyName>Geolocation</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Unspecified</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Ignore Presentation Indicators</Title>
+      <FieldKeyName>IgnorePresentationIndicators</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Allow Control of Device from CTI</Title>
+      <FieldKeyName>AllowControlofDevicefromCTI</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Logged into Hunt Group</Title>
+      <FieldKeyName>LoggedintoHuntGroup</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Remote Devices</Title>
+      <FieldKeyName>RemoteDevices</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Protected Devices</Title>
+      <FieldKeyName>ProtectedDevices</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Hot line Device</Title>
+      <FieldKeyName>HotlineDevice</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Require off-premise location</Title>
+      <FieldKeyName>Requireoffpremiselocation</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+          <Caption></Caption>
+          <Value></Value>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="Number Presentation Transformation">
+    <Field>
+      <Title>Calling Party Transformation CSS</Title>
+      <FieldKeyName>CallingPartyTransformationCSSNPT</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCSSByApplicationProfileID</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>CallingSearchSpace</Value>
+          <SQLParameter>
+            <ParameterName>CustomerId</ParameterName>
+            <ParameterName>ApplicationProfileID</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Use Device Pool Calling Party Transformation CSS (Caller ID For Calls From This Phone)</Title>
+      <FieldKeyName>UseDevicePoolCallingPartyTransformationCSSCallerIDForCallsFromThisPhone</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+  <Panel  Caption="Remote Number">
+    <Field>
+      <Title>Calling Party Transformation CSS</Title>
+      <FieldKeyName>CallingPartyTransformationCSSCPTC</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCSSByApplicationProfileID</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>CallingSearchSpace</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Use Device Pool Calling Party Transformation CSS (Device Mobility Related Information)</Title>
+      <FieldKeyName>Use DevicePoolCallingPartyTransformationCSSDeviceMobilityRelatedInformation</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="Protocol Specific Information">
+    <Field>
+      <Title>Packet Capture mode</Title>
+      <FieldKeyName>PacketCapturemode</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+            <Item>Batch Processing Mode</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Packet Capture Duration</Title>
+      <FieldKeyName>PacketCaptureDuration</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>int</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>BLF Presence Group</Title>
+      <FieldKeyName>BLFPresenceGroup</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetPresenceGroupByApplicationProfileID</Caption>
+          <Key>PresenceGroupID</Key>
+          <Value>PresenceGroupName</Value>
+          <SQLParameter>
+            <ParameterName>CustomerId</ParameterName>
+            <ParameterName>ApplicationProfileID</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>SIP Dial Rules</Title>
+      <FieldKeyName>SIPDialRules</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>MTP Preferred Originating Codec</Title>
+      <FieldKeyName>MTPPreferredOriginatingCodec</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Device Security Profile</Title>
+      <FieldKeyName>DeviceSecurityProfile</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Select</Item>
+            <Item>Cisco 6921 - Standard SIP Non-Secure Profile</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Rerouting Calling Serach Space</Title>
+      <FieldKeyName>ReroutingCallingSerachSpace</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCSSByApplicationProfileID</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>CallingSearchSpace</Value>
+          <SQLParameter>
+            <ParameterName>CustomerId</ParameterName>
+            <ParameterName>ApplicationProfileID</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>SUBSCRIBE Calling Search Space</Title>
+      <FieldKeyName>SUBSCRIBECallingSearchSpace</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetCSSByApplicationProfileID</Caption>
+          <Key>CallingSearchSpaceID</Key>
+          <Value>CallingSearchSpace</Value>
+          <SQLParameter>
+            <ParameterName>CustomerId</ParameterName>
+            <ParameterName>ApplicationProfileID</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>SIP Profile</Title>
+      <FieldKeyName>SIPProofile</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+            <Item>SIP_Android</Item>
+            <Item>Standard SIP Profile</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Digest User</Title>
+      <FieldKeyName>DigestUser</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>DB</SourceType>
+          <Caption>USP_GetUserByApplicationProfileID</Caption>
+          <Key>UserID</Key>
+          <Value>LoginID</Value>
+          <SQLParameter>
+            <ParameterName>ApplicationProfileID</ParameterName>
+            <ParameterName>CustomerId</ParameterName>
+          </SQLParameter>
+        </SourceInfo>
+      </Source>
+    </Field>
+    
+    <Field>
+      <Title>Media Termination Point Required</Title>
+      <FieldKeyName>MediaTerminationPointRequired</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Unattended Port</Title>
+      <FieldKeyName>UnattendedPort</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+
+    <Field>
+      <Title>Require DTMF Reception</Title>
+      <FieldKeyName>RequireDTMFReception</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="Extension Information">
+    <Field>
+      <Title>Enable Extension Mobility</Title>
+      <FieldKeyName>EnableExtensionMobility</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>Boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="MLPP and Confidential Access Level Information">
+    <Field>
+      <Title>MLPP Domain</Title>
+      <FieldKeyName>MLPPDomain</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+            <Item>000000</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Enable Extension MLPP Indication</Title>
+      <FieldKeyName>MLPPIndication</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>On</Item>
+            <Item>Off</Item>
+            <Item>Default</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>MLPP Preemption</Title>
+      <FieldKeyName>MLPPPreemption</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Default</Item>
+            <Item>Disabled</Item>
+            <Item>Forceful</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Confidential Access Mode</Title>
+      <FieldKeyName>ConfidentialAccessMode</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+            <Item>Fixed</Item>
+            <Item>Variable</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Confidential Access Level</Title>
+      <FieldKeyName>ConfidentialAccessLevel</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="Do Not Disturb">
+    <Field>
+      <Title>Do Not Disturb</Title>
+      <FieldKeyName>DoNotDisturb</FieldKeyName>
+      <ControlType>CheckBox</ControlType>
+      <DataType>boolean</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>DND Option</Title>
+      <FieldKeyName>DNDOption</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>Ringer Off</Item>
+            <Item>Call Reject</Item>
+            <Item>Use Common Phone Profile Setting</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>DND Incoming Call Alert</Title>
+      <FieldKeyName>DNDIncomingCallAlert</FieldKeyName>
+      <ControlType>DropDownList</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceInfo>
+          <SourceType>INLINE</SourceType>
+          <Caption></Caption>
+          <Key>key</Key>
+          <Value>value</Value>
+          <SQLParameter/>
+          <ListItem>
+            <Item>None</Item>
+            <Item>Disable</Item>
+            <Item>Flash Only</Item>
+            <Item>Beep Only</Item>
+          </ListItem>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+
+  <Panel  Caption="Secure Shell Information">
+    <Field>
+      <Title>Secure Shell User</Title>
+      <FieldKeyName>SecureShellUser</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+    <Field>
+      <Title>Secure Shell Password</Title>
+      <FieldKeyName>SecureShellPassword</FieldKeyName>
+      <ControlType>TextBox</ControlType>
+      <DataType>string</DataType>
+      <Source>
+        <SourceType></SourceType>
+        <SourceInfo>
+        </SourceInfo>
+      </Source>
+    </Field>
+  </Panel>
+</DeviceFieldInformation>
